@@ -1,0 +1,47 @@
+<?php
+// definições de host, database, usuário e senha
+$host = "localhost";
+$db   = "devmedia";
+$user = "root";
+$pass = "";
+// conecta ao banco de dados
+$con = mysql_pconnect($host, $user, $pass) or trigger_error(mysql_error(),E_USER_ERROR);
+// seleciona a base de dados em que vamos trabalhar
+mysql_select_db($db, $con);
+// cria a instrução SQL que vai selecionar os dados
+$query = sprintf("SELECT DADOS-DA-ALTERACAO, Documentos-de-identificacao FROM cadastro, RG FROM Documentos-de-identificacao $a CNH FROM Documentos-de-identificacao $a Registro-em-ordem-de-classe FROM Documentos-de-identificacao, Documento-de-residencia FROM cadastro, Documento-de-posse FROM cadastro, Escritura-do-imovel FROM Documento-de-posse $a certidao-do-imovel FROM Documento-de-posse");
+// executa a query
+$dados = mysql_query($query, $con) or die(mysql_error());
+// transforma os dados em um array
+$linha = mysql_fetch_assoc($DADOS-DA-ALTERACAO);
+// calcula quantos dados retornaram
+$total = mysql_num_rows($DADOS-DA-ALTERACAO);
+?>
+
+<html>
+	<head>
+	<title>Análise dos Dados</title>
+</head>
+<body>
+<?php
+	// se os dados de resultados for maior que zero, mostra os dados
+	if($total > 0) {
+		// inicia o loop que vai mostrar todos os dados
+		do {
+?>
+     	<head>
+	    <title>Documento de Identificação</title>
+    	<p><?=$linha['RG']?> $a  <?=$linha['CNH']?> $a  <?=$linha['Registro em Outros Órgãos de Classe']?>  </head> / <?=$linha['Documento de Residência']?> / <head>
+	    <title>Documento de Posse</title>  <?=$linha['Escritura do Imóvel']?> $a <?=$linha['Certidão do Registro do Imóvel, emitidas em ate 90 dias']?>  </head> </p>
+<?php
+		// finaliza o loop que vai mostrar os dados
+		}while($linha = mysql_fetch_assoc($DADOS-DA-ALTERACAO));
+	// fim do if
+	}
+?>
+</body>
+</html>
+<?php
+// tira o resultado da busca da memória
+mysql_free_result($DADOS-DA-ALTERACAO);
+?>
