@@ -1,0 +1,192 @@
+package .gitignore;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.OneToOne;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+
+import com.auth0.jwt.internal.com.fasterxml.jackson.annotation.JsonCreator;
+import com.auth0.jwt.internal.com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+import .gitignore.Escritura;
+import .gitignore.Certidao;
+import .gitignore.Declaracao;
+import .gitignore.Rg;
+import .gitignore.CPF;
+import .gitignore.IPTU;
+
+@Entity
+@Table(name = "DadosDaAlteracao")
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class DocumentosDeIdentificacao {
+
+	@Id
+	private String id;
+
+	@OneToOne
+	@JoinColumn(name = "ID_Escritura")
+	private Escritura idEscritura;
+
+	@Column(name = "CNH")
+	private String cnh;
+
+	@Column(name = "CPF")
+	private String cpf;
+
+	@OneToOne
+	@JoinColumn(name = "ID_Certidao")
+	private Certidao idCertidao;
+
+	@OneToOne
+	@JoinColumn(name = "ID_Declaracao")
+	private Declaracao idDeclaracao;
+
+	@OneToOne
+	@JoinColumn(name = "ID_Rg")
+	private Rg idRg;
+	
+	@Transient
+	private String Nome;
+
+	@Transient
+	private String ano;
+
+	@Transient
+	private String mes;
+
+        @Transient
+	private String mes;
+	
+
+	public DadosDaAlteracao() {
+	}
+
+	@JsonCreator
+	public DadosDaAlteracao(@JsonProperty("RG") String RG, 
+                        @JsonProperty("CNH") String CNH,
+			@JsonProperty("Registro_de_classe") String Registro_de_classe, {
+		this.RG = RG;
+		this.CNH = CNH;
+                this.Registro_de_classe = Registro_de_classe;
+		
+	}
+           @JsonCreator
+	public DadosDaAlteracao(@JsonProperty("DocumentoResidencia") String DocumentoResidencia,
+{
+		this.DocumentoResidencia = DocumentoResidencia;
+}
+
+
+	@JsonCreator
+	public DadosDaAlteracao(@JsonProperty("idEscritura") Escritura idEscritura, @JsonProperty("Escritura") String escritura,
+			@JsonProperty("certidao") String certidao, @JsonProperty("idDadosDaAlteracao") DadosDaAlteracao idDadosDaAlteracao,
+			@JsonProperty("idCeridao") Ceridao idCertidao, {
+		this.Escritura = idEscritura;
+		this.certidao = certidao;
+		this.idDadosDaAlteracao = idDadosDaAlteracao;
+		
+	}
+
+	public void DadosDaAlteracao(DadosDaAlteracao v) {
+
+		id = v.getId();
+		idRG = v.getIdRG();
+		idRegistro_de_classe = v.getIdRegistro_de_classe();
+		idDadosDaAlteracao = v.getIdDadosDaAlteracao();
+		idDocumentoResidencia = v.getDocumentoResidencia();
+		idCNH = v.getCNH();
+                idEscritura = v.getEscritura();
+                idcertidao = v.getcertidao();
+	}
+
+	public RG getIdRG() {
+		return idRG;
+	}
+
+	public void setIdRG(RG idRG) {
+		this.idRG = idRG;
+	}
+
+	public String getRegistro_de_classe() {
+		return matricula;
+	}
+
+	public void setRegistro_de_classe(String Registro_de_classe) {
+		this.Registro_de_classe = Registro_de_classe;
+	}
+
+	public String getDocumentoResidencia() {
+		return DocumentoResidencia;
+	}
+
+	public void setDocumentoResidencia(String DocumentoResidencia) {
+		this.DocumentoResidencia = DocumentoResidencia;
+	}
+
+	public CNH getIdCNH() {
+		return idCNH;
+	}
+
+	public void setIdCNH(String idCNH) {
+		this.idCNH = idCNH;
+	}
+
+	public Escritura getIdEscritura() {
+		return idEscritura;
+	}
+
+	public void setIdEscritura(Escritura idEscritura) {
+		this.idEscritura = idEscritura;
+	}
+
+	public String getId() {
+		// TODO Auto-generated method stub
+		return id;
+	}
+
+	public void setId(String id) {
+
+		this.id = id;
+	}
+
+	public String getcertidao() {
+		return certidao;
+	}
+
+	public void setcertidao(String certidao) {
+		this.certidao = certidao;
+	}
+
+	public String getAno() {
+		return ano;
+	}
+
+	public void setAno(String ano) {
+		this.ano = ano;
+	}
+
+	public String getMes() {
+		return mes;
+	}
+
+	public void setMes(String mes) {
+		this.mes = mes;
+	}
+
+	
+
+	@Override
+	public String toString() {
+		return "DadosDaAlteracao [idRG=" + idRG + ", CNH=" + CNH + ", Registro_de_classe=" + Registro_de_classe + ", idDadosDaAlteracao="
+				+ idDadosDaAlteracao + ", idDocumentoResidencia=" + idDocumentoResidencia +, "idEscritura="
+				+ idEscritura +, "idcertidao="
+				+ idcertidao + "]";
+	}
+
+}
+
+
