@@ -1,4 +1,5 @@
 import {StyleSheet} from 'react-native'
+import {environment} from '../../../environment/environment'
 
 export const style = StyleSheet.create(
     {
@@ -16,15 +17,15 @@ export const style = StyleSheet.create(
            fontWeight: 'bold',
            margin:10
         },success:{
-            backgroundColor: environment.colors.success,
+            backgroundColor: environment.colors.btn_raised,
             paddingHorizontal: 40,
             paddingVertical: 20,
-            
             marginHorizontal: 15,
-            borderRadius: 6
+            borderRadius: 6,
+            opacity: .1
         },
         danger:{
-            backgroundColor: environment.colors.danger,
+            backgroundColor: 'transparent',
             paddingHorizontal: 40,
             paddingVertical: 20,
             marginHorizontal: 15,
@@ -38,20 +39,19 @@ export const style = StyleSheet.create(
             marginHorizontal: 40,
             alignItems: 'center',
             justifyContent: 'center',
-            top: 400
-    
-    
+            marginVertical: 20,
         },
         textDanger:{
             fontFamily: 'OpenSans',
             fontWeight: '700',
-            color: 'white',
+            color: environment.colors.danger,
             fontSize: 14,
+            textDecorationLine:'underline'
         },
         textSuccess:{
             fontFamily: 'OpenSans',
             fontWeight: '700',
-            color: 'black',
+            color: 'white',
             fontSize: 14,
         },
         text4:{

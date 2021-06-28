@@ -1,5 +1,5 @@
 import React from 'react'
-import {ScrollView,View,Text} from 'react-native'
+import {ScrollView,View,Text,TouchableOpacity} from 'react-native'
 import {style} from './style'
 
 export default function TermoDeUso(){
@@ -80,7 +80,7 @@ Observações:
 <Text style={style.title}>4. DOS DIREITOS E DEVERES:</Text>
 <Text style={style.text}>Obrigam-se os utilizadores do ZeraFila à observância fiel das regulamentações impostas pelos Órgãos competentes, bem como as obrigações a seguir listadas de acordo com a parte envolvida competente.
 
-a) Compete a RED TECH:{'\n'}
+a Compete a RED TECH:{'\n'}
 
 1. Administrar e gerir o software ZeraFila;{'\n'}
 
@@ -92,7 +92,7 @@ a) Compete a RED TECH:{'\n'}
 
 5. O suporte supracitado não abrange equipamentos de responsabilidade do usuário e/ou Prefeitura de João Pessoa/PB;{'\n'}
 
-b) Compete a PREFEITURA DO MUNICÍPIO DE JOÃO PESSOA/PB:{'\n'}
+b Compete a PREFEITURA DO MUNICÍPIO DE JOÃO PESSOA/PB:{'\n'}
 
 1. Disponibilizar o cadastramento biométrico da face dos usuários;{'\n'}
 
@@ -266,22 +266,20 @@ desenvolvidas pelo ZeraFila, deixando os usuários informados sempre que ocorrer
 
 
     
-    <View>
+    <View style={{justifyContent: 'center', alignItems:'center', display:'flex'}}>
         <Text>Declaro que li e concordo com os termos de uso e o aviso de privacidade</Text>
-        
-        <View style={styles.buttonContainer}>
-            <TouchableOpacity style={styles.danger} onPress={() => {navigation.navigate('BioPass')}}>
-                <Text style={styles.textDanger}>Não sou eu</Text>
+        <View style={style.buttonContainer}>
+            <TouchableOpacity style={style.danger} onPress={() => {navigation.navigate('Tutorial')}}>
+                <Text style={style.textDanger}>Cancelar</Text>
             </TouchableOpacity>
-            <TouchableOpacity style={styles.success} onPress={() => {navigation.navigate('Home',data)}}>
-                <Text style={styles.textSuccess}>Confirmar dados</Text>
+            <TouchableOpacity style={style.success} onPress={() => {navigation.navigate('InputCpf')}}>
+                <Text style={style.textSuccess}>Aceitar</Text>
             </TouchableOpacity>
+        </View>
     </View>
-
-</View>
 
 
             
-        </ScrollView>
+</ScrollView>
     )
 }
