@@ -193,7 +193,7 @@ const ButtonNavigation = ({navigation}) => {
           <Icon name="chevron-left" color={environment.colors.btn_raised} type='Entypo'></Icon>
         </TouchableOpacity>
        : null}
-          <TouchableOpacity style={{position: 'absolute', backgroundColor:'white',bottom:80,right:-10}}>
+          <TouchableOpacity style={{position: 'absolute', backgroundColor:'white',bottom:80,right:-10}} onPress={() => skipToStart()}>
             <Text style={{textDecorationLine:'underline',color:'#0BCEBB'}} >Pular</Text>
           </TouchableOpacity>
         <TouchableOpacity
@@ -222,7 +222,7 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection:'row',
     position:'relative',
-    marginBottom: -15
+    marginBottom: -50
   },
   buttonRaised: {
     backgroundColor: environment.colors.btn_raised,

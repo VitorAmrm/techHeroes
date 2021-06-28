@@ -5,7 +5,7 @@ export const style = StyleSheet.create(
     {
 
         header:{
-            backgroundColor: environment.colors.btn_raised,
+            backgroundColor: environment.colors.light_btn_raised,
             height: 75,
             paddingStart: 39,
             paddingTop: 36

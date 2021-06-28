@@ -138,6 +138,7 @@ android {
         versionCode 1
         versionName "1.0"
         vectorDrawables.useSupportLibrary = true
+
     }
     splits {
         abi {
@@ -153,6 +154,14 @@ android {
             storePassword 'android'
             keyAlias 'androiddebugkey'
             keyPassword 'android'
+        }
+        release{
+            if(project.hasProperty('ZERAFILA_STORE_FILE')){
+                storeFile file (ZERAFILA_STORE_FILE)
+                storePassword ZERAFILA_STORE_PASSWORD
+                keyAlias ZERAFILA_KEY_ALIAS
+                keyPassword ZERAFILA_KEY_PASSWORD
+            }
         }
     }
     buildTypes {

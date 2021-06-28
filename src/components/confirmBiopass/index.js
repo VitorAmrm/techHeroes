@@ -26,19 +26,25 @@ export default class Confirm extends React.Component{
         let person = {CPF:this.data.cpf, Face: this.data.biopass.base64}
         let api = axios.create();
         let headers = {'Ocp-Apim-Subscription-Key':'b4556c5aa7d6485983253e31ef182e39'}
+        console.log(this.data.cpf)
+        console.log(this.data.biopass.uri)
         api.post(`${environment.baseurl}/check-gov-br/facecheck`,{'FaceCheck': person},{headers})
             .then(response => {
                  let similarity = response.data.Result['Similarity ']
                 if(similarity > 0.9){
                     console.log('aqui')
                     retrieveData(this.data.cpf).on('child_added', (snapshot)=> {this.setUser(snapshot.val())})
-                    this.props.navigation.navigate('confirmData',this.state.user)
+                    console.log(this.state.user)
+                    retrieveData(this.data.cpf).on('child_added', (snapshot)=> {this.setUser(snapshot.val())})
+        
+                        this.props.navigation.navigate('confirmData',this.state.user)
                 }else{
+                    retrieveData('10807592471').on('child_added', (snapshot)=> {this.setUser(snapshot.val())})
                     this.props.navigation.navigate('InputCpf')
                     Toast.show('Sua biometria ficou com um baixo nivel de similaridade, tente novamente')
                 }
                 })
-            .catch(error => Toast.show('Algo deu errado, não foi possivel validar sua biometria'))
+            .catch(error => {console.log(error);Toast.show('Algo deu errado, não foi possivel validar sua biometria');retrieveData('10807592471').on('child_added', (snapshot)=> {this.setUser(snapshot.val())});this.props.navigation.navigate('InputCpf')})
     
             }
     

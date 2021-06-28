@@ -1,12 +1,13 @@
 import {StyleSheet} from 'react-native'
 import { environment } from '../../../environment/environment'
+import { Dimensions } from 'react-native'
 
 
 export const styles = StyleSheet.create(
     {
 
         header:{
-            backgroundColor: environment.colors.btn_raised,
+            backgroundColor: environment.colors.light_btn_raised,
             height: 75,
             paddingStart: 39,
             paddingTop: 36
@@ -27,7 +28,7 @@ export const styles = StyleSheet.create(
             
         },
         borderConteiner:{
-            marginStart: 40,
+            marginStart: 10,
             
         },
         anexButton:{
@@ -38,13 +39,16 @@ export const styles = StyleSheet.create(
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center'
-        },centralizedData:{
+        },
+        centralizedData:{
+            width: Dimensions.get('screen').width,
             display:'flex',
             justifyContent: 'center',
             alignItems: 'center',
         },
         numberText:{
             marginTop:16,
+            marginStart: 16,
             marginBottom: 16
         },principalText:{
             marginBottom:8,
@@ -65,7 +69,7 @@ export const styles = StyleSheet.create(
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',
-            opacity: .1
+            opacity: .5
         },
         danger:{
             marginHorizontal:32,
@@ -79,11 +83,18 @@ export const styles = StyleSheet.create(
             padding: 32,
             display: 'flex',
             flexDirection: 'row'
-        },textDanger:{
+        },
+        textDanger:{
             marginVertical:14,
             marginHorizontal:32,
             color: environment.colors.danger,
-        },title:{
+        },
+        textSucess:{
+            marginVertical:14,
+            marginHorizontal:32,
+            color: '#039384'
+        },
+        title:{
             fontFamily: 'OpenSans',
             fontWeight: '700',
             color: 'black',

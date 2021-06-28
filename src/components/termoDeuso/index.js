@@ -2,7 +2,7 @@ import React from 'react'
 import {ScrollView,View,Text,TouchableOpacity} from 'react-native'
 import {style} from './style'
 
-export default function TermoDeUso(){
+export default function TermoDeUso({navigation}){
     return (
 
         <ScrollView style={{margin:32}}>
@@ -41,7 +41,7 @@ Na presente versão, conta com a possibilidade dos usuários que já constam ou 
 
             <Text style={style.text}>1. Câmera com resolução mínima de 320px (largura) por 568px (altura);{'\n'}
 
-2. Capacidade de armazenamento de xxxxxxxxxxxxxx{'\n'}
+2. Capacidade de armazenamento de 200 MB{'\n'}
 Requisitos Mínimos de Software:{'\n'}
 
 1. Sistema Operacional Android versão 4.1;{'\n'}
@@ -135,7 +135,7 @@ Pública, a qualquer outro usuário, ou, ainda, a qualquer terceiro, inclusive e
 10. Se responsabilizar por qualquer dado pessoal divulgado por ele a terceiros numa tentativa de comprovação de dados, bem como em outras situações similares, por intermédio do aplicativo ZeraFila.{'\n'}</Text>
 
 <Text style={style.title}>5.  DA ISENÇÃO DE RESPONSABILIDADES:</Text>
-<Text>
+<Text style={style.text}>
 O ZeraFila é fornecido em seu atual estágio de desenvolvimento, sem garantias ou condições, não estando livre de interrupções ou erros. Nesta oportunidade, os utilizadores renunciam a todas e quaisquer indenizações por danos indiretos, morais e materiais contra a RED TECH por uso do ZeraFila, restando limitada a participação da RED TECH à
 correção das intercorrências eventualmente encontradas durante o cumprimento deste
 instrumento.
@@ -146,20 +146,20 @@ documento particular, falsidade ideológica, uso de documento falso e falsa iden
 
 
 <Text style={style.title}>6. DA PROPRIEDADE INTELECTUAL E DO DIREITO AUTORAL:</Text>
-<Text>
+<Text style={style.text}>
 O ZeraFila é um software desenvolvido pela empresa RED TECH, sendo esta detentora exclusiva de todos os direitos de propriedade intelectual, estando devidamente reservados, observados os termos da Lei Nº 9.279/96 (Lei da Propriedade Industrial), Lei
 Nº 9.610/98 (Lei de Direitos Autorais) e da Lei Nº 9.609/98 (Lei do Software), ficando os utilizadores proibidos de usar quaisquer das marcas veiculadas pela RED TECH sem o expresso consentimento, por escrito, do titular da marca, exceto nos casos permitidos pela lei aplicável.
 </Text>
 <Text style={style.title}>7. DO AVISO DE PRIVACIDADE::</Text>
-<Text>O acesso ao aplicativo está condicionado a realização de cadastramento biométrico da face nos postos de atendimento da Prefeitura do Município de João Pessoa/PB, da existência de cadastro junto ao canal digital unificado do Governo Federal (gov.br), bem como, da declaração positiva de consentimento a ser marcada na primeira tentativa de acesso do usuário, que, segue junto ao presente Termo de Uso.</Text>
+<Text style={style.text}>O acesso ao aplicativo está condicionado a realização de cadastramento biométrico da face nos postos de atendimento da Prefeitura do Município de João Pessoa/PB, da existência de cadastro junto ao canal digital unificado do Governo Federal (gov.br), bem como, da declaração positiva de consentimento a ser marcada na primeira tentativa de acesso do usuário, que, segue junto ao presente Termo de Uso.</Text>
 <Text style={style.title}>8. DA VIGÊNCIA E ALTERAÇÕES:</Text>
-<Text>
+<Text style={style.text}>
 O presente termo foi revisado em 26 de junho de 2021, estando vigente desde 26 de junho de 2021, por prazo indeterminado, podendo ainda, a critério exclusivo e a qualquer tempo, por parte da RED TECH, ser alterado para adequar ou modificar os serviços, bem como para atender novas exigências legais, dada a devida notificação à Prefeitura do Município de João Pessoa/PB.
 
 Para todos os efeitos legais, será considerada concordância tácita a continuidade da utilização do ZeraFila pelos prepostos da Prefeitura do Município de João Pessoa/PB, posteriormente as alterações, seja através do aplicativo e/ou website.
 </Text>
 <Text style={style.title}>9. DAS DISPOSIÇÕES GERAIS:</Text>
-<Text>
+<Text style={style.text}>
 A qualquer tempo, conforme os avanços na pesquisa e tecnologia, observada a existência de inexigibilidade de licitação em razão da singularidade do software, exclusividade do fornecedor e da necessidade do Município, poderá ser ofertado pela RED TECH uma versão do ZeraFila que contemple mais serviços públicos municipais, a depender de nova contratação específica pelo Município..
 
 O não exercício de qualquer um dos termos elencados não impedirá que qualquer das PARTES os exerça a qualquer tempo, mesmo após a extinção deste instrumento particular, a não ser que seja dada quitação integral.
@@ -171,7 +171,7 @@ A tolerância de uma parte para com a outra quanto ao descumprimento de qualquer
 cumprimento deste instrumento.
 </Text>
 <Text style={style.title}>10. DO FORO:</Text>
-<Text>
+<Text style={style.text}>
 Para a solução de controvérsias decorrentes do presente instrumento, serão aplicadas, exclusivamente, as leis da República Federativa do Brasil, ficando eleito como foro, a cidade em que se encontra a sede da RED TECH, qual seja, João Pessoa/PB.
 
 </Text>
@@ -195,9 +195,9 @@ dados pessoais e são abrangidos pelo o âmbito da LGPD (Lei Geral de Proteção
 
 Não obstante, a Lei 13.709/18 que dispõe sobre a Proteção de Dados Pessoais, no seu artigo 5º e nos seus três primeiros incisos classifica os dados pessoais em três categoriais:
 
-• Dado pessoal: É toda a informação vinculada a uma pessoa natural;
+{'\n'}• Dado pessoal: É toda a informação vinculada a uma pessoa natural;
 
-• Dado pessoal sensível: De acordo com a lei ora mencionada, dado pessoal sensível é todo dado sobre a origem racial ou étnica, convicção religiosa, opinião
+{'\n'}• Dado pessoal sensível: De acordo com a lei ora mencionada, dado pessoal sensível é todo dado sobre a origem racial ou étnica, convicção religiosa, opinião
 política, filiação a sindicato ou a organização de caráter religioso, filosófico ou político, dado referente à saúde ou à vida sexual, dado genético ou biométrico, quando vinculado a uma pessoa natural;
 
 • Dado pessoal anonimazado: dado relativo a titular que não possa ser identificado, considerando a utilização de meios técnicos razoáveis e disponíveis
@@ -206,30 +206,30 @@ na ocasião de seu tratamento.</Text>
 <Text style={style.title}>2. Quais informações nós coletamos e os fundamentos?</Text>
 <Text style={style.text}>A RED TECH atua como operador, tratando dos dados pessoais dos usuários para o cumprimento da obrigação legal ou regulatória do controlador, qual seja, a Prefeitura de João Pessoa/PB, conforme preceitua o art. 7º, II e o art. 11, II da Lei Nº 13.460, de 26 de junho de 2017 (Lei de Proteção e Defesa dos Direitos de Usuários dos Serviços Públicos da Administração Pública), uma vez que a Fazenda Pública tem o dever de zelar pela correção das informações constantes em seus cadastros, diligenciando, inclusive, para a regular atualização, a fim de que os tributos sejam lançados em nome dos reais contribuintes e as Certidões de Dívida Ativa se formalizem sem vícios.
 
-Logo abaixo, veja a listagem dos dados tratados pela RED TECH referentes ao uso do software ZeraFila:
+Logo abaixo, veja a listagem dos dados tratados pela RED TECH referentes ao uso do software ZeraFila:{'\n'}
 
-• Nome, CPF e data de nascimento;
+{'\n'}• Nome, CPF e data de nascimento;
 
-• Data e hora do acesso;
+{'\n'}• Data e hora do acesso;
 
-• Biometria facial;
+{'\n'}• Biometria facial;
 
-• Documento de IPTU, ITBI ou ITCMD, escritura do imóvel ou certidão do registro do imóvel com validade;
+{'\n'}• Documento de IPTU, ITBI ou ITCMD, escritura do imóvel ou certidão do registro do imóvel com validade;
 
-• Tecnologias similares a cookies.
+{'\n'}• Tecnologias similares a cookies.
 
-Ao acessar o aplicativo do ZeraFila, seu dispositivo eletrônico fornece dados não pessoais de forma automática. Esses dados são referentes a como você interage com nossas ferramentas e são fornecidos pelo seu dispositivo, bem como tecnologias similares
+{'\n'}Ao acessar o aplicativo do ZeraFila, seu dispositivo eletrônico fornece dados não pessoais de forma automática. Esses dados são referentes a como você interage com nossas ferramentas e são fornecidos pelo seu dispositivo, bem como tecnologias similares
 a cookies. É de suma importância ressaltar que o ZeraFila não aplica essa identificação de dados de forma individual com o fim de análise, mas sim com o objetivo de melhorar a usabilidade do aplicativo e entender as necessidades do usuário.</Text>
 
 <Text style={style.title}>3. Qual a finalidade do uso dos dados?</Text>
 <Text style={style.text}>Nós processamos suas informações para os seguintes propósitos:
 
-• Para gerenciar contas de usuários: Viabilizar a identificação do usuário e sessão;
+{'\n'}• Para gerenciar contas de usuários: Viabilizar a identificação do usuário e sessão;
 
-• Para mudança de titularidade do imposto predial e territorial urbano: utilizamos seus dados pessoais e documentos relacionados ao seu imóvel para
+{'\n'}• Para mudança de titularidade do imposto predial e territorial urbano: utilizamos seus dados pessoais e documentos relacionados ao seu imóvel para
 fomentar o serviço prestado;
 
-• Para proteção do nosso aplicativo: através da biometria facial, evitamos fraudes e prevenimos ataques, podemos utilizar suas informações para identificar ações maliciosas, atendendo aos esforços de manter o aplicativo seguro e confiável.</Text> 
+{'\n'}• Para proteção do nosso aplicativo: através da biometria facial, evitamos fraudes e prevenimos ataques, podemos utilizar suas informações para identificar ações maliciosas, atendendo aos esforços de manter o aplicativo seguro e confiável.</Text> 
             
 <Text style={style.title}>4. Seus dados serão compartilhados?</Text>
 
@@ -266,7 +266,7 @@ desenvolvidas pelo ZeraFila, deixando os usuários informados sempre que ocorrer
 
 
     
-    <View style={{justifyContent: 'center', alignItems:'center', display:'flex'}}>
+    <View style={{justifyContent: 'center', alignItems:'center', display:'flex',margin: 10}}>
         <Text>Declaro que li e concordo com os termos de uso e o aviso de privacidade</Text>
         <View style={style.buttonContainer}>
             <TouchableOpacity style={style.danger} onPress={() => {navigation.navigate('Tutorial')}}>

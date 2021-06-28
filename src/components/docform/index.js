@@ -35,7 +35,7 @@ export default function Docform({navigation}){
                 <View style={styles.borderConteiner}>
                     <Text style={styles.numberText}>2.</Text>
                     <View style={styles.centralizedData}>
-                        <Text style={styles.principalText}>COMPROVANTE DE PAGAMENTO DO IPTU{"\N"} ATUALIZADO</Text>
+                        <Text style={styles.principalText}>COMPROVANTE DE PAGAMENTO DO IPTU{"\n"} ATUALIZADO</Text>
                         <View style={styles.centralizedData}>
                         <TouchableOpacity style={styles.anexButton}>
                             <Text style={styles.buttonText}>Anexar</Text>
@@ -47,8 +47,8 @@ export default function Docform({navigation}){
             <View style={styles.restdataContainer}>
                 <View style={styles.borderConteiner}>
                     <Text style={styles.numberText}>3.</Text>
-                    <View style={styles.centralizedData}>
-                        <Text style={styles.principalText}>COMPROVANTE DE PAGAMENTO DO ITBI OU{"\N"} ITCMD</Text>
+                        <View style={styles.centralizedData}>
+                        <Text style={styles.principalText}>COMPROVANTE DE PAGAMENTO DO ITBI OU{"\n"} ITCMD</Text>
                         <View style={styles.centralizedData}>
                         <TouchableOpacity style={styles.anexButton}>
                             <Text style={styles.buttonText}>Anexar</Text>
@@ -75,8 +75,8 @@ export default function Docform({navigation}){
                 <TouchableOpacity style={styles.danger}>
                             <Text style={styles.textDanger}>Cancelar</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.success}>
-                            <Text style={styles.buttonText}>Enviar tudo</Text>
+                        <TouchableOpacity  onPress={() => {navigation.navigate('ConfirmDocPush')}} style={styles.success}>
+                            <Text style={styles.textSucess}>Enviar tudo</Text>
                         </TouchableOpacity>
                 </View>
             </View>

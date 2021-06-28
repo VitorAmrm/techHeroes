@@ -26,7 +26,7 @@ export const styles = StyleSheet.create({
         marginHorizontal: 40,
         alignItems: 'center',
         justifyContent: 'center',
-        top: 400
+        top: 200
 
 
     },
@@ -61,7 +61,7 @@ export const styles = StyleSheet.create({
         marginHorizontal:15,
         marginVertical: 30
     },header:{
-        backgroundColor: environment.colors.btn_raised,
+        backgroundColor: environment.colors.light_btn_raised,
         height: 75,
         paddingStart: 39,
         paddingTop: 36

@@ -21,7 +21,7 @@ export const styles = StyleSheet.create({
         fontSize: 18,
     },
     header:{
-        backgroundColor: environment.colors.btn_raised,
+        backgroundColor: environment.colors.light_btn_raised,
         height: 75,
         paddingStart: 39,
         paddingTop: 36

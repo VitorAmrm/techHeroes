@@ -5,7 +5,7 @@ export const styles = StyleSheet.create(
     {
 
         header:{
-            backgroundColor: environment.colors.btn_raised,
+            backgroundColor: environment.colors.light_btn_raised,
             height: 75,
             paddingStart: 39,
             paddingTop: 36
@@ -85,7 +85,9 @@ export const styles = StyleSheet.create(
             marginTop:32
         },
         linkButton:{
-            marginTop:16
+            marginTop:8,
+            textDecorationLine: 'underline'
+            
         },
         title:{
             fontFamily: 'OpenSans',

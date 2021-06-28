@@ -15,9 +15,9 @@ export default function RequireCpf({navigation}){
                 <TextInput style = {{margin: 32,backgroundColor:'#E3EDF1',color:'#8D9090'}} placeholderTextColor='#8D9090' placeholder='Insira CPF' onChangeText={setInput}></TextInput>
             </View>
             <View>
-                <TouchableOpacity style={[style.anexButton,{top:500}]} onPress={() => navigation.navigate('BioPass',{cpf:input}) }>
+                <TouchableOpacity style={[style.anexButton, {top: 350}]} onPress={() => navigation.navigate('BioPass',{cpf:input}) }>
                 <Text style = {style.buttonText}>ENVIAR</Text>
-            </TouchableOpacity>
+                </TouchableOpacity>
             </View>
         </View>
         </View>

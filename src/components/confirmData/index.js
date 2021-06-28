@@ -9,7 +9,7 @@ export default function DataFormComponent ({navigation, data}){
         <View style={styles.container}>
         <View style={styles.capsuleMargin}>
             <Text style={styles.text4}>Estes são seus dados cadastrados em</Text>
-            <Text style={styles.text7}>Prefeirtura de João Pessoa</Text>
+            <Text style={styles.text7}>Prefeitura de João Pessoa - PB</Text>
         </View>
         <View style={styles.capsuleMargin}>
             <Text style={styles.text4}>Nome:</Text>

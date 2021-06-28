@@ -22,7 +22,6 @@ export const style = StyleSheet.create(
             paddingVertical: 20,
             marginHorizontal: 15,
             borderRadius: 6,
-            opacity: .1
         },
         danger:{
             backgroundColor: 'transparent',

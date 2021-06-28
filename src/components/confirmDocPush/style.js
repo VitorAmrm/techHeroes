@@ -1,10 +1,11 @@
 import { StyleSheet } from "react-native"
 import {environment} from "../../../environment/environment"
-export const styles = StyleSheet.create(
+
+export const style = StyleSheet.create(
     {
 
         header:{
-            backgroundColor: environment.colors.btn_raised,
+            backgroundColor: environment.colors.light_btn_raised,
             height: 75,
             paddingStart: 39,
             paddingTop: 36
@@ -36,7 +37,12 @@ export const styles = StyleSheet.create(
         },
         buttonText:{
             marginVertical:14,
-            marginHorizontal:32,
+            marginHorizontal:48,
             color: 'white'
+        },text:{
+            fontFamily: 'OpenSans',
+            fontWeight: '400',
+            color: 'black',
+            fontSize: 12,
         }
     })

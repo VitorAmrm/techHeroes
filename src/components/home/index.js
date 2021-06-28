@@ -4,7 +4,7 @@ import { TouchableOpacity, View, Text, ScrollView } from 'react-native'
 import { styles } from './style'
 
 
-export default function HomeComponent ({navigation}){
+export default function HomeComponent ({navigation,data}){
     return (
         <ScrollView>
             <View style={styles.header}>
@@ -35,7 +35,8 @@ export default function HomeComponent ({navigation}){
             <View style={styles.loadingContainer}>
                 <View style={styles.textWrap} >
                     <Text  style={styles.title} >Aguardando aprovação</Text>
-                    <Text style={styles.marginTextWrap}>Nenhum documento aguardando{'\n'}aprovação</Text>
+                    {console.log(data.aguardando)}
+                    {!data.aguardando ?<Text style={styles.marginTextWrap}>Nenhum documento aguardando{'\n'}aprovação</Text>:<Text style={styles.marginTextWrap}>{data.aguardando}</Text>}
                 </View>
             </View>
             <View style={styles.loadingContainer}>
@@ -46,10 +47,13 @@ export default function HomeComponent ({navigation}){
             </View >
             <View style={styles.loadingContainer}>
                 <View  style={styles.textWrap}>
+                
                     <Text  style={styles.title}>Mais Opções</Text>
-                    <Text>Acessar Termos de Uso e Aviso de Privacidade</Text>
-                    <Text tyle={styles.linkButton}>Ajuda</Text>
-                    <Text tyle={styles.linkButton}>Sobre</Text>
+                    <TouchableOpacity onPress={() => navigation.navigate('TermoDeUso')}>
+                        <Text style={styles.linkButton}>Acessar Termos de Uso e Aviso de Privacidade</Text>
+                    </TouchableOpacity>
+                    <Text style={styles.linkButton}>Ajuda</Text>
+                    <Text style={styles.linkButton}>Sobre</Text>
                 </View>
             </View>
         </ScrollView>
