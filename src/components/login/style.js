@@ -1,9 +1,10 @@
 import { StyleSheet } from "react-native";
+import { environment } from "../../../environment/environment";
 
 export default style = StyleSheet.create({
   container: {
     height:'100%',
-    backgroundColor: '#003f5c',
+    backgroundColor: environment.colors.splash_background,
     display: "flex",
     justifyContent: 'center',
     alignItems: 'center',

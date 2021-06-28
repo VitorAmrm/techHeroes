@@ -3,12 +3,10 @@ import React from 'react'
 import { Text, View, Button } from 'react-native';
 import  LoginForm from '../../components/login';
 
-export default function LoginPage(){
-    const navigation = useNavigation();
-
+export default function LoginPage({navigation}){
     return(
         <View>
-            <LoginForm/>
+            <LoginForm navigation={navigation}/>
         </View>
     )
 }

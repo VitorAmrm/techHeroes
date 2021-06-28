@@ -1,13 +1,13 @@
 import { useNavigation } from '@react-navigation/core'
 import React from 'react'
 import { Text, View, Button } from 'react-native';
+import { firebaseAuth } from '../../../environment/firebase/config';
+import HomeComponent from '../../components/home'
 
-export default function HomePage(){
-    const navigation = useNavigation();
+export default function HomePage({navigation,route}){
     return(
         <View>
-            <Text>HOME</Text>
-            <Button title="to Login" onPress={() => navigation.navigate("Login")}/>
+            <HomeComponent navigation={navigation} data={route.params}></HomeComponent>
         </View>
     )
 }
